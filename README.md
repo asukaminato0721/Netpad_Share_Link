@@ -31,4 +31,6 @@ https://www.netpad.net.cn/resource_web/course/#/114514
 
 TODO
 
-- [ ] 编写油猴脚本一键生成
+- [x] [编写油猴脚本一键生成](https://greasyfork.org/zh-CN/scripts/407902-%E7%BD%91%E7%BB%9C%E7%94%BB%E6%9D%BF%E9%93%BE%E6%8E%A5%E5%88%86%E4%BA%AB%E8%84%9A%E6%9C%AC)
+
+- [ ] 减少代码重复部分
