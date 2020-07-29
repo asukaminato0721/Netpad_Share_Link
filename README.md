@@ -26,3 +26,9 @@ https://www.netpad.net.cn/resource_web/course/#/114514
 ---
 
 手动替换太麻烦，放了 Python 脚本
+
+---
+
+TODO
+
+- [ ] 编写油猴脚本一键生成
