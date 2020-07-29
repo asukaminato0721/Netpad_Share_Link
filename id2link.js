@@ -9,42 +9,35 @@
 // ==/UserScript==
 
 (function () {
-  "use strict";
+  ("use strict");
   // 感谢 @flaribbit 的帮助，这是他的 GitHub 地址 https://github.com/flaribbit
-  var url = document.URL;
+  // SICP 的思想无处不在
   var len = "https://www.netpad.net.cn/svg.html#posts/".length;
-  var id = url.slice(len);
-  var target = document.querySelector("div.files");
-  // el
-  var el = document.createElement("div");
-  var input = document.createElement("input");
-  target.parentNode.insertBefore(el, target);
-  target.parentNode.insertBefore(input, target);
-  input.style = "border: none;width: 1px;z-index: -1;";
-  el.className = "export";
-  el.innerText = "复制分享链接";
-  el.style = "cursor: pointer;";
-  // el1
-  var el1 = document.createElement("div");
-  var input1 = document.createElement("input");
-  target.parentNode.insertBefore(el1, target);
-  target.parentNode.insertBefore(input1, target);
-  input1.style = "border: none;width: 1px;z-index: -1;";
-  el1.className = "export";
-  el1.innerText = "复制嵌入链接";
-  el1.style = "cursor: pointer;";
-  // el1
-  el.onclick = function () {
-    prompt("", "https://www.netpad.net.cn/resource_web/course/#/" + id);
-  };
-  el1.onclick = function () {
-    prompt(
-      "",
-      '<iframe width="772" height="434" src="https://www.netpad.net.cn/thirdInnerPad.html?id=' +
-        id +
-        "#posts/" +
-        id +
-        '" frameborder="0" scrolling="auto"></iframe>'
-    );
-  };
+  var id = document.URL.slice(len);
+  function AddLink(name, web) {
+    var target = document.querySelector("div.files");
+    var el = document.createElement("div");
+    var input = document.createElement("input");
+    target.parentNode.insertBefore(el, target);
+    target.parentNode.insertBefore(input, target);
+    input.style = "border: none;width: 1px;z-index: -1;";
+    el.className = "export";
+    el.innerText = name;
+    el.style = "cursor: pointer;";
+    el.onclick = function () {
+      prompt("Ctrl+C", web);
+    };
+  }
+  AddLink(
+    "复制分享链接",
+    "https://www.netpad.net.cn/resource_web/course/#/" + id
+  );
+  AddLink(
+    "复制嵌入链接",
+    '<iframe width="772" height="434" src="https://www.netpad.net.cn/thirdInnerPad.html?id=' +
+      id +
+      "#posts/" +
+      id +
+      '" frameborder="0" scrolling="auto"></iframe>'
+  );
 })();
