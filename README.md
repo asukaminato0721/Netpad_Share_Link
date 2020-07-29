@@ -3,11 +3,15 @@
 
 如果只是分享演示链接
 
+```
 https://www.netpad.net.cn/resource_web/course/#/+id
+```
 
 例如
 
+```
 https://www.netpad.net.cn/resource_web/course/#/114514
+```
 
 ---
 
